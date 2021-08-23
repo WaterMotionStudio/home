@@ -69,8 +69,32 @@ title: FAQ
     }
 
     .answer{
-
+      max-height: 0;
+      overflow: hidden;
+      position: relative;
+      background-color: #212838 ;
     }
+    .answer::before{
+      content: "";
+      position: absolute;
+      width: .6rem;
+      height: 90%;
+      background-color: #8fc460;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%);
+    }
+
+    .answer p{
+      font-size: 1.4rem;
+      color: rgba(255,255,255,.6);
+      padding: 2rem;
+    }
+
+    .faq-item:target .answer{
+      max-height: 20rem;
+    }
+    
   </style>
   <body>
     <section>
